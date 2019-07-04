@@ -1,13 +1,13 @@
 module.exports = (app) => {
     const notes = require('../controllers/note.controller.js');
 
-    app.post('/notes', notes.create);
+    app.post('/add', notes.create);
 
-    app.get('/notes', notes.findAll);
+    app.get('/findall', notes.findAll);
 
-    app.get('/notes/:noteId', notes.findOne);
+    app.get('/findbyid/:noteId', notes.findOne);
 
-    app.put('/notes/:noteId', notes.update);
+    app.put('/update/:noteId', notes.update);
 
     // app.delete('/notes/:noteId', notes.delete);
 }
